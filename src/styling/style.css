@@ -1,0 +1,68 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.board {
+}
+
+.board .row {
+  display: flex;
+}
+
+.node {
+  width: 20px;
+  height: 20px;
+  outline: 1px solid rgb(194, 194, 194);
+}
+
+.start {
+  background-color: green;
+}
+
+.target {
+  background-color: red;
+}
+
+.wall {
+  animation-name: wallAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.unvisited {
+  background-color: rgb(233, 233, 233);
+}
+
+.visited {
+  background-color: rgb(226, 220, 187);
+}
+
+.shortest-path {
+  background-color: rgb(199, 174, 33);
+}
+
+@keyframes wallAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgb(12, 53, 71);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(12, 53, 71);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(12, 53, 71);
+  }
+}
